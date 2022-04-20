@@ -1,0 +1,141 @@
+:root {
+  font-size: 6.25%;
+  --bg-header: hsla(218, 17%, 62%, 1);
+  --bg-main: #EFF1FF;
+  --bg-banner: #CBC0D3;
+  --font-default: 'Staatliches', sans-serif;
+  --font-p: 'Palanquin', sans-serif;
+  --cp: hsla(274, 84%, 12%, 1);
+  --ch1: hsla(232, 17%, 35%, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16rem;
+  font-family: var(--font-default);
+  display: grid;
+  grid-area: "A"
+  "B";
+}
+
+.page {
+  width: 384rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+header {
+  grid-template-areas: A;
+  height: 279rem;
+  background-color: var(--bg-header);
+}
+
+header svg {
+  margin: 32rem auto;
+  height: 137rem;
+}
+
+main {
+  grid-template-areas: B;
+}
+
+.banner {
+  height: 49rem;
+  background-color: var(--bg-banner);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 40rem;
+  font-weight: normal;
+  line-height: 34rem;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  text-shadow: 0rem 2rem 2rem rgba(0, 0, 0, 0.25); 
+}
+
+img {
+  width: 100%;
+  height: 250rem;
+
+  object-fit: cover;
+
+  border-radius: 20rem;
+  animation: downUp 800ms ease;
+  transition: all 200ms;
+}
+
+.cards-wrapper {
+  padding: 0 32rem;
+}
+
+.card {
+  position: relative;
+  margin-bottom: 32rem;
+}
+
+.card:nth-child(even) img {
+  height: 450rem;
+}
+
+p {
+  font-family: var(--font-p);
+  font-size: 14rem;
+  font-weight: normal;
+  line-height: 15rem;
+  color: var(--cp);
+
+  margin: 14rem 36rem 55rem;
+}
+
+h2 {
+  opacity: 0;
+
+  font-size: 20rem;
+  font-weight: normal;
+  line-height: 34rem;
+  letter-spacing: 0.05em;
+  background-color: #FEEAFA;
+  color: var(--ch1);
+
+  width: fit-content;
+  padding: 1rem 27rem;
+  border-radius: 20rem;
+  
+  position: absolute;
+  top: 16rem;
+  right: 16rem;
+
+  animation: showUp 1s 700ms forwards;
+}
+
+@keyframes downUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
